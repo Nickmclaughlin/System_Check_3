@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> <%= params[:id] %></title>
+  </head>
+
+  <h1><%= @ingredients[0]["name"] %><h1>
+    <body>
+      <p> Description: <%= @ingredients[0]["description"] %></p>
+      <p> Instructions: <%= @ingredients[0]["instructions"] %></p>
+      <p> List of Ingredients </p>
+      <ol> <% @ingredients.each do |recipe| %>
+        <li><%= recipe["ingredient"] %></li>
+        <% end %>
+      </ol>
+    </body>
+</html>
+</html>
